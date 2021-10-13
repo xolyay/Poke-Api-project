@@ -21,7 +21,7 @@ body {
   width: 60%;
 }
 
-.display {
+.card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,48 +35,48 @@ body {
       justify-content: space-around;
 }
 
-.display .display__element {
+.card .card__element {
   display: inline-block;
   position: relative;
-  -webkit-box-shadow: 0px 0px 100px #ff0505;
-          box-shadow: 0px 0px 100px #ff0505;
   border-radius: 20px;
-  margin: 50px 50px 50px 50px;
+  margin: 100px 100px;
   text-align: center;
   text-transform: uppercase;
   color: whitesmoke;
+  -webkit-box-shadow: 0px 0px 100px #ff0505;
+          box-shadow: 0px 0px 100px #ff0505;
 }
 
-.display .display__element:hover {
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+.card .card__element:hover {
+  -webkit-transition: all 1s;
+  transition: all 1s;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-.display h2 {
+.card h2 {
   background-color: rgba(255, 7, 7, 0.144);
   padding-top: 30px;
   text-align: center;
   font-size: 80px;
 }
 
-.display p {
+.card p {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 80px;
   padding-bottom: 10px;
   color: red;
 }
 
-.display img {
+.card img {
   margin: 100px;
 }
 
 /*Animation pokeball*/
 .pokeball {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   background: #fff;
   border: 40px solid #000;
   border-radius: 50%;

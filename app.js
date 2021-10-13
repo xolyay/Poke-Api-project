@@ -39,7 +39,7 @@ const injectPoke = (buscadorDePoke) => {
   const pokePag = buscadorDePoke
     .map(
       (pokemon) =>
-        `<li class="display__element" onclick="changeUrl(event)">
+        `<li class="card__element" onclick="changeUrl(event)">
           <h2>${pokemon.name}</h2>
           <img class="${pokemon.name}"  id="img" src="https://areajugones.sport.es/wp-content/uploads/2021/03/resumen-anime-de-pokemon-1080x600.jpeg" alt="${pokemon.name}"/>
           
