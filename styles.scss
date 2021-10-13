@@ -1,0 +1,153 @@
+
+
+
+
+body{
+   
+    background-color: rgb(0, 0, 7);
+    margin: 20px 20px;
+    padding: 50px;
+    }
+
+
+    .logoDiv{
+        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        padding-bottom: 200px;
+        padding-top: 200px;
+    }
+
+    .logo{
+        width:60%;
+    }
+
+    
+    .display{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .display__element{
+           
+            
+            display:inline-block;
+            position: relative;
+            box-shadow: 0px 0px 100px rgb(255, 5, 5);
+            
+            border-radius: 20px;
+            margin: 50px 50px 50px 50px;
+            text-align: center;
+            text-transform: uppercase;
+            color: whitesmoke;
+
+            
+            
+           
+            
+              }
+
+
+              .display__element:hover {
+                transition: all 1s ease-in-out;
+
+                transform: rotate(360deg);
+          
+        }
+
+        
+        
+       
+
+        h2{
+            background-color: rgba(255, 7, 7, 0.144);
+            padding-top: 30px;
+            text-align: center;
+            font-size: 80px;
+            
+        }
+
+        p{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 80px;
+            padding-bottom: 10px;
+            color: red;
+           
+        }
+       img{
+           margin: 100px;
+       }
+    }
+
+    /*Animation pokeball*/
+
+        .pokeball {
+            position: relative;
+            width: 600px;
+            height: 600px;
+            background: #fff;
+            border: 40px solid #000;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: inset -10px 10px 0 10px #ccc;
+            animation: fall 3.25s infinite,
+                    shake 1.25s cubic-bezier(.36,.07,.19,.97) 3;
+        
+        }
+
+
+
+        .pokeball::before,
+        .pokeball::after {
+            content:"";
+            position: absolute;
+        }
+        .pokeball::before {
+            background: red;
+            width: 100%;
+            height: 50%;
+        }
+        .pokeball::after {
+            top: calc(50% - 10px);
+            width: 100%;
+            height: 20px;
+            background: #000;
+        }
+        .pokeball__button {
+            position: absolute;
+            top: calc(50% - 30px);
+            left: calc(50% - 30px);
+            width: 90px;
+            height: 90px;
+            background: #7f8c8d;
+            border: 10px solid #fff;
+            border-radius: 50%;
+            z-index: 10;
+            box-shadow: 0 0 0 10px black;
+            animation: blink .5s alternate 7;
+        
+        
+        }
+
+
+        @keyframes blink {
+            from { background: #eee;}
+            to { background: #e74c3c; }
+        }
+        @keyframes shake {
+            0% { transform: translate(0, 0) rotate(0); }
+            20% { transform: translate(-10px, 0) rotate(-20deg); }
+            30% { transform: translate(10px, 0) rotate(20deg); }
+            50% { transform: translate(-10px, 0) rotate(-10deg); }
+            60% { transform: translate(10px, 0) rotate(10deg); }
+            100% { transform: translate(0, 0) rotate(0); }
+        }
+        @keyframes fall {
+            0% { top: -200px }
+            60% { top: 0 }
+            80% { top: -20px }
+            100% { top: 0 }
+        }

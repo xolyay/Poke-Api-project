@@ -1,0 +1,226 @@
+body {
+  background-color: #000007;
+  margin: 20px 20px;
+  padding: 50px;
+}
+
+.logoDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 200px;
+  padding-top: 200px;
+}
+
+.logo {
+  width: 60%;
+}
+
+.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.display .display__element {
+  display: inline-block;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 100px #ff0505;
+          box-shadow: 0px 0px 100px #ff0505;
+  border-radius: 20px;
+  margin: 50px 50px 50px 50px;
+  text-align: center;
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+
+.display .display__element:hover {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.display h2 {
+  background-color: rgba(255, 7, 7, 0.144);
+  padding-top: 30px;
+  text-align: center;
+  font-size: 80px;
+}
+
+.display p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 80px;
+  padding-bottom: 10px;
+  color: red;
+}
+
+.display img {
+  margin: 100px;
+}
+
+/*Animation pokeball*/
+.pokeball {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  background: #fff;
+  border: 40px solid #000;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-box-shadow: inset -10px 10px 0 10px #ccc;
+          box-shadow: inset -10px 10px 0 10px #ccc;
+  -webkit-animation: fall 3.25s infinite, shake 1.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) 3;
+          animation: fall 3.25s infinite, shake 1.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) 3;
+}
+
+.pokeball::before,
+.pokeball::after {
+  content: "";
+  position: absolute;
+}
+
+.pokeball::before {
+  background: red;
+  width: 100%;
+  height: 50%;
+}
+
+.pokeball::after {
+  top: calc(50% - 10px);
+  width: 100%;
+  height: 20px;
+  background: #000;
+}
+
+.pokeball__button {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  width: 90px;
+  height: 90px;
+  background: #7f8c8d;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  z-index: 10;
+  -webkit-box-shadow: 0 0 0 10px black;
+          box-shadow: 0 0 0 10px black;
+  -webkit-animation: blink .5s alternate 7;
+          animation: blink .5s alternate 7;
+}
+
+@-webkit-keyframes blink {
+  from {
+    background: #eee;
+  }
+  to {
+    background: #e74c3c;
+  }
+}
+
+@keyframes blink {
+  from {
+    background: #eee;
+  }
+  to {
+    background: #e74c3c;
+  }
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(0);
+            transform: translate(0, 0) rotate(0);
+  }
+  20% {
+    -webkit-transform: translate(-10px, 0) rotate(-20deg);
+            transform: translate(-10px, 0) rotate(-20deg);
+  }
+  30% {
+    -webkit-transform: translate(10px, 0) rotate(20deg);
+            transform: translate(10px, 0) rotate(20deg);
+  }
+  50% {
+    -webkit-transform: translate(-10px, 0) rotate(-10deg);
+            transform: translate(-10px, 0) rotate(-10deg);
+  }
+  60% {
+    -webkit-transform: translate(10px, 0) rotate(10deg);
+            transform: translate(10px, 0) rotate(10deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(0);
+            transform: translate(0, 0) rotate(0);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(0);
+            transform: translate(0, 0) rotate(0);
+  }
+  20% {
+    -webkit-transform: translate(-10px, 0) rotate(-20deg);
+            transform: translate(-10px, 0) rotate(-20deg);
+  }
+  30% {
+    -webkit-transform: translate(10px, 0) rotate(20deg);
+            transform: translate(10px, 0) rotate(20deg);
+  }
+  50% {
+    -webkit-transform: translate(-10px, 0) rotate(-10deg);
+            transform: translate(-10px, 0) rotate(-10deg);
+  }
+  60% {
+    -webkit-transform: translate(10px, 0) rotate(10deg);
+            transform: translate(10px, 0) rotate(10deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(0);
+            transform: translate(0, 0) rotate(0);
+  }
+}
+
+@-webkit-keyframes fall {
+  0% {
+    top: -200px;
+  }
+  60% {
+    top: 0;
+  }
+  80% {
+    top: -20px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes fall {
+  0% {
+    top: -200px;
+  }
+  60% {
+    top: 0;
+  }
+  80% {
+    top: -20px;
+  }
+  100% {
+    top: 0;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
