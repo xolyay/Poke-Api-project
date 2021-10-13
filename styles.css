@@ -75,8 +75,8 @@ body {
 /*Animation pokeball*/
 .pokeball {
   position: relative;
-  width: 600px;
-  height: 600px;
+  width: 200px;
+  height: 200px;
   background: #fff;
   border: 40px solid #000;
   border-radius: 50%;
